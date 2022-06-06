@@ -11,7 +11,6 @@ namespace Bigschool_DinhTrongSu.Controllers
 {
     public class CoursesController : Controller
     {
-        // GET: Courses
         private readonly ApplicationDbContext _dbContext;
         public CoursesController()
         {
@@ -30,6 +29,7 @@ namespace Bigschool_DinhTrongSu.Controllers
 
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(CourseViewModel viewModel)
         {
             if(!ModelState.IsValid)

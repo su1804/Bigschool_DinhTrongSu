@@ -79,6 +79,9 @@ namespace Bigschool_DinhTrongSu.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+        [Required]
+        [StringLength(255)]
+        public string Name { get; set; }
     }
 
     public class ResetPasswordViewModel
@@ -100,6 +103,8 @@ namespace Bigschool_DinhTrongSu.Models
         public string ConfirmPassword { get; set; }
 
         public string Code { get; set; }
+       
+       
     }
 
     public class ForgotPasswordViewModel
