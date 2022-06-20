@@ -20,6 +20,9 @@ namespace Bigschool_DinhTrongSu.ViewModels
         [Required]
         public byte Category { get; set; }
         public IEnumerable<Category> Categories { get; set; }
+        public bool ShowAction { get; set; }
+        public IEnumerable<course> UpcommingCourses { get; set; }
+       
 
         public DateTime GetDateTime()
         {
